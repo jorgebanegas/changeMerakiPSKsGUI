@@ -1,4 +1,7 @@
 # changeMerakiPSKsGUI
+
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/gve-sw/changeMerakiPSKsGUI)
+
 A GUI where network admins can select multiple SSIDs to change the PSKs. This saves time since on the Meraki Dashboard, you can only change one at a time. Can select the organization, the network(s), then multiple SSIDs to change. The user can optionally input their email address so that an email or message on Webex Teams will be sent to them notifying that the changes were made.
 
 ![/IMAGES/logic.png](/IMAGES/logic.png)
@@ -57,6 +60,18 @@ git clone https://github.com/gve-sw/changeMerakiPSKsGUI.git
 docker-compose up
 ```
 
+## Generating Meraki API Key
+
+1. Access the Meraki dashboard.
+2. For access to the API, first enable the API for your organization under Organization > Settings > Dashboard API access.
+
+![/IMAGES/meraki_profile.png](/IMAGES/meraki_profile.png)
+
+3. After enabling the API, go to "my profile" on the upper right side of the dashboard to generate an API key. This API key will be associated with the Dashboard Administrator account which generates it, and will inherit the same permissions as that account. You can generate, revoke, and regenarate your API key on  your profile.
+
+![/IMAGES/api_access.png](/IMAGES/api_access.png)
+
+** Always keep your API key safe as it provides authentication to all your organizations with the API enabled. If your API key is shared, you can regenerate your API key at any time. This will revoke the existing API key. **
 
 ## Usage
 Navigate to [localhost:5000](http://localhost:5000) to use the app.
